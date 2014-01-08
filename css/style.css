@@ -1,16 +1,74 @@
 body {
   font-family: Verdana;
-  font-size: 1.5em; }
-
-#team-members {
-  clear: both; }
-  #team-members .member {
-    float: left;
-    /*border: 1px solid gray;*/
-    margin: 10px;
-    padding: 6px; }
-    #team-members .member img {
+  font-size: 1.5em;
+  background-color: #E7DED6; }
+  body h1 {
+    color: #472400; }
+  body h2 {
+    color: #472400; }
+  body #team-members {
+    clear: both; }
+    body #team-members .member {
+      background-color: #FFFFFF;
+      float: left;
+      /*border: 1px solid gray;*/
+      margin: 10px;
+      position: relative;
+      display: inline-block;
       width: 200px;
-      height: 200px; }
-    #team-members .member div.name {
-      text-align: center; }
+      height: 250px;
+      background-color: #E7DED6; }
+      body #team-members .member .hover {
+        opacity: 0; }
+      body #team-members .member:hover img {
+        width: 210px;
+        height: 210px;
+        z-index: 1; }
+      body #team-members .member:hover:nth-child(even) .active {
+        opacity: 0;
+        -webkit-transform: rotate(360deg) translate(-0.5em, -1em);
+        transform: rotate(360deg) translate(-0.5em, -1em); }
+      body #team-members .member:hover:nth-child(even) .hover {
+        opacity: 1;
+        -webkit-transform: rotate(360deg) translate(-0.5em, -1em);
+        transform: rotate(360deg) translate(-0.5em, -1em);
+        border: 3px solid #472400; }
+      body #team-members .member:hover:nth-child(odd) .active {
+        opacity: 0;
+        -webkit-transform: rotate(-360deg) translate(-0.5em, -1em);
+        transform: rotate(-360deg) translate(-0.5em, -1em); }
+      body #team-members .member:hover:nth-child(odd) .hover {
+        opacity: 1;
+        -webkit-transform: rotate(-360deg) translate(-0.5em, -1em);
+        transform: rotate(-360deg) translate(-0.5em, -1em);
+        border: 3px solid #472400; }
+    body #team-members img {
+      position: absolute;
+      left: 0;
+      -webkit-transition: opacity 1s ease-in-out, height 2s, width 2s, -webkit-transform 2s;
+      -moz-transition: opacity 1s ease-in-out, height 2s, width 2s, -moz-transform 2s;
+      -o-transition: opacity 1s ease-in-out, height 2s, width 2s, -o-transform 2s;
+      transition: opacity 1s ease-in-out, height 2s, width 2s, transform 2s;
+      width: 200px;
+      height: 200px;
+      top: 0px;
+      left: 0px;
+      border-radius: 15px;
+      box-shadow: 2em; }
+    body #team-members div.name {
+      text-align: center;
+      bottom: 0px;
+      position: absolute;
+      width: 200px; }
+
+.bio_pic {
+  height: 600px;
+  border-radius: 15px;
+  border: 5px solid #472400;
+  margin-left: 20%;
+  margin-right: auto; }
+
+.bio_div {
+  float: left;
+  margin-left: 10px;
+  width: 45%; }

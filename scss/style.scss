@@ -1,27 +1,120 @@
 body {
   font-family: Verdana;
   font-size: 1.5em;
-}
+  background-color:#E7DED6;
 
-#team-members {
-  clear: both;
-  
-  .member {
-    float: left;
-    /*border: 1px solid gray;*/
-    margin: 10px;
-    padding: 6px;
+  h1{
+    color: #472400;
+  }
+
+  h2{
+    color: #472400;
+  }
+  #team-members {
+    clear: both;
     
-    img {
-    width: 200px;
-    height: 200px;
-    }
-    
-    div.name {
-    text-align: center;  
+    .member {
+      background-color: #FFFFFF;
+      float: left;
+      /*border: 1px solid gray;*/
+      margin: 10px;
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      height: 250px;
+      background-color: #E7DED6;
+      
+      .hover {
+        opacity: 0;
+      }
+      
+      &:hover{
+        img {
+           width: 210px;
+           height: 210px;
+           z-index: 1;
+        }
+        &:nth-child(even){
+          .active {
+            opacity: 0;
+            -webkit-transform: rotate(360deg) translate(-0.5em, -1em);
+            transform: rotate(360deg) translate(-0.5em, -1em);
+            
+          }
+          .hover {
+            opacity: 1;
+            -webkit-transform: rotate(360deg) translate(-0.5em, -1em);
+            transform: rotate(360deg) translate(-0.5em, -1em);
+            border: 3px solid #472400;
+            }
+          }
+
+          &:nth-child(odd){
+          .active {
+            opacity: 0;
+            -webkit-transform: rotate(-360deg) translate(-0.5em, -1em);
+            transform: rotate(-360deg) translate(-0.5em, -1em);
+            
+          }
+          .hover {
+            opacity: 1;
+            -webkit-transform: rotate(-360deg) translate(-0.5em, -1em);
+            transform: rotate(-360deg) translate(-0.5em, -1em);
+            border: 3px solid #472400;
+            }
+          }
+        } 
+      }
+
+
+   
+      img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 1s ease-in-out, height 2s, width 2s, -webkit-transform 2s;
+      -moz-transition: opacity 1s ease-in-out, height 2s, width 2s, -moz-transform 2s;
+      -o-transition: opacity 1s ease-in-out, height 2s, width 2s, -o-transform 2s;
+      transition: opacity 1s ease-in-out, height 2s, width 2s, transform 2s;
+      width: 200px;
+      height: 200px;
+      top: 0px;
+      left: 0px;
+      border-radius: 15px;
+      box-shadow: 2em;
+      }
+      
+      div.name {
+      text-align: center; 
+      bottom: 0px; 
+      position: absolute;
+      width: 200px;
+      }
     }
   }
-}
+
+  .bio_pic {
+        height: 600px;
+        border-radius: 15px;
+        border: 5px solid #472400;
+        margin-left: 20%;
+        margin-right: auto;
+
+
+      }
+
+  .bio_div {
+    float: left;
+    margin-left: 10px;
+    width: 45%;
+  }
+
+
+
+ 
+
+
+
+
 
 
 
